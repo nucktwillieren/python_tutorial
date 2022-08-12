@@ -5,6 +5,8 @@ def main():
 
     print("hello, world".replace("e", "b"))  # string object
 
+    # forbidden: o, O, I, l
+
     print(1 + 1)  # 2
 
     print(1 * 2)  # 2
@@ -50,6 +52,22 @@ def main():
     print("hi".capitalize())  # Hi
 
     print("a" + "b")  # ab
+
+    print([1, 2, 3, 4, 5])  # list
+    # list -> dynamic
+    # array -> static
+
+    print((1, 2, 3, 4))  # tuple
+    # tuple -> immutable
+    # list -> mutable
+
+    print({
+        "a": "b",
+        "c": "d",
+    })
+    # dictionary -> dict
+    # T: O(1) -> access, update, insert, delete (average)
+    # T: O(n) -> get index by get()
 
 
 if __name__ == "__main__":
