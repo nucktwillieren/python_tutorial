@@ -1,0 +1,15 @@
+// fortran-style pesudo applied
+
+function product_sum_pesudo
+    n = input integer from user // initialize "n" to an integer that input from user
+    sum = zero // initialize "sum" to zero
+
+    Do i = 1 to n-1
+        If i % 3 is 0 or i % 5 is 0
+            sum += i
+    end do
+
+    return sum
+
+// Analysis
+// Time Complexity = O(n)

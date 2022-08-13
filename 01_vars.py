@@ -1,5 +1,5 @@
 def main():
-    print("hello, world")  # print a string
+    print("hello, world", "helw 2")  # print a string
 
     print(1..is_integer())  # interger object
 
@@ -37,7 +37,7 @@ def main():
 
     print("hi".endswith("i"))  # true
 
-    print(" hi ".rstrip())  # hi
+    print(" hi ".rstrip("i"))  # hi
 
     print(" hi ".lstrip())  # hi
 
@@ -53,21 +53,26 @@ def main():
 
     print("a" + "b")  # ab
 
+    a = [1, 2, 3, 4, 5]
     print([1, 2, 3, 4, 5])  # list
+    a.append(6)
     # list -> dynamic
     # array -> static
 
     print((1, 2, 3, 4))  # tuple
     # tuple -> immutable
     # list -> mutable
+    # pass by reference
+    # pass by value
+    # pass by assignment
 
     print({
-        "a": "b",
+        "user-1": "password",
         "c": "d",
     })
     # dictionary -> dict
     # T: O(1) -> access, update, insert, delete (average)
-    # T: O(n) -> get index by get()
+    # T: O(n) -> get index by get("user-1")
 
 
 if __name__ == "__main__":

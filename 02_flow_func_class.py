@@ -7,6 +7,7 @@ def multiply(a, b):
 
 def power(base, exponent):
     a = 1
+
     for _ in range(exponent):
         a = a * base
 
@@ -39,6 +40,7 @@ def while_infinite_loop():
     # bool([])
     # bool({})
 
+    # 1 = True
     while 1:  # (while condition True, Python running the block below)
         print("infinite")
 
@@ -48,9 +50,11 @@ def condition_in_for():
         if i == 2:
             pass
         # or, and
-        if i == 0 or i == 3:
+        # elif i == 2:
+        #     continue
+        elif i == 0 or i == 3:
             continue
-        if i == 4:
+        elif i == 4:
             break
         print(i, end=",")
 
@@ -66,15 +70,24 @@ def condition_in_for():
 
 
 class Human:
-    def __init__(self, age: int) -> None:
+    # static vars
+    # class vars
+    # leg_num = 2
+
+    def __init__(self, age, name) -> None:
         self.age = age
+        self.name = name
+        self.name_age_mixin = name + "_" + str(age)  # "nathan_24"
         print("private age:", self.__get_age())
 
     # public will be inherited
     def get_age(self):
         return self.age
 
-    # protectd will be inherited
+    def hello(self):
+        return "hi, " + self.name
+
+    # protected will be inherited
     def _get_age(self):
         return self.age
 
@@ -82,8 +95,14 @@ class Human:
     def __get_age(self):
         return self.age
 
+# instance()
 
-class Person(Human):
+
+class Female(Human):
+    pass
+
+
+class Male(Human):
     pass
 
 
@@ -93,10 +112,10 @@ def main():
     for_in_range_params()
     condition_in_for()
 
-    person = Person(age=1)
-    print("age:", person.age)
-    print("age:", person.get_age())
-    print("age:", person.__get_age())
+    female = Female(age=1, name="kik")
+    print("age:", female.age)
+    print("age:", female.get_age())
+    print("age:", female.__get_age())
 
 
 if __name__ == "__main__":

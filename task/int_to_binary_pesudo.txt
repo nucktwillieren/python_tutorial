@@ -1,0 +1,12 @@
+Setup 1: initialize a array "a"
+Setup 2: initialize a number "n"
+Step 1: Get remainder from the number "n" by dividing by 2 and store the remainder in array "a"
+Step 2: Divide the number "n" by 2 through / (division operator)
+Step 3: Repeat the step 2 until number is greater than 0
+
+Example: 
+    input a number "n" = 3
+    the array "a" = [1, 1]
+
+Analysis:
+    Time Complexity = O(n)
